@@ -1,0 +1,9 @@
+README.md
+setup.py
+GenAI_Project.egg-info/PKG-INFO
+GenAI_Project.egg-info/SOURCES.txt
+GenAI_Project.egg-info/dependency_links.txt
+GenAI_Project.egg-info/top_level.txt
+src/__init__.py
+src/helper.py
+src/prompt.py
