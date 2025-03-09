@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.wrapper {
+    width: 900px; /* Increased width */
+    max-width: 95%; /* Ensures responsiveness */
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.wrapper .title {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.wrapper .box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow-y: auto; /* Ensures scrolling when content overflows */
+}
+
+.wrapper .box .item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.wrapper .box .item .icon {
+    background: #007bff;
+    color: white;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.wrapper .box .item .msg {
+    background: #007bff;
+    color: white;
+    border-radius: 10px;
+    padding: 14px 18px;
+    max-width: 75%; /* Wider message bubbles */
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+.wrapper .box .item.right {
+    justify-content: flex-end;
+}
+
+.wrapper .box .item.right .msg {
+    background: #efefef;
+    color: #333;
+}
+
+.wrapper .typing-area {
+    display: flex;
+    padding: 15px;
+    background: #efefef;
+}
+
+.wrapper .typing-area .input-field {
+    flex: 1;
+    position: relative;
+}
+
+.wrapper .typing-area .input-field input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.wrapper .typing-area .input-field input:focus {
+    border-color: #007bff;
+}
+
+.wrapper .typing-area .input-field button {
+    margin-left: 12px;
+    padding: 14px 20px;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wrapper .typing-area .input-field button:hover {
+    background: #0056b3;
+}
