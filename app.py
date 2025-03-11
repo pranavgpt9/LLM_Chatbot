@@ -70,3 +70,52 @@ def chatbot():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080, debug=True)
+
+#handles out-of-context questions by retrieving relevant information
+
+# @app.route("/get", methods=["POST"])
+# def chatbot():
+#     msg = request.form.get("msg")  # Get user message from POST request
+#     if not msg:
+#         return jsonify({"error": "No input received"}), 400
+
+#     logging.info(f"User Input: {msg}")
+
+#     try:
+#         # Retrieve context-relevant documents
+#         docs = retriever.invoke(msg)
+
+#         # Log the number of retrieved documents
+#         logging.info(f"Retrieved {len(docs)} documents for input: {msg}")
+
+
+#         # Optionally log details of each document (ensure no sensitive info is logged)
+#         for idx, doc in enumerate(docs):
+#             logging.debug(f"Document {idx}: {doc}")
+
+#         # Check if any documents were retrieved
+#         if not docs:
+#             return jsonify({"response": "I'm sorry, I can only answer context-based questions."})
+
+#         # Generate response using RAG
+#         response = RAG.invoke({"input": msg})
+#         chatbot_response = response.get("answer", "I'm sorry, I couldn't process that.")
+
+#         # Compare the response with the retrieved documents
+#         retrieved_text = " ".join([doc.page_content for doc in docs])
+#         if chatbot_response.strip() in retrieved_text:
+#             logging.info("Response is based on retrieved context.")
+#         else:
+#             logging.info("Response is out of context.")
+#             chatbot_response = "Your question is out of context. Please ask a context-based question."
+
+#     except Exception as e:
+#         logging.error(f"Error processing response: {str(e)}")
+#         return jsonify({"error": "Internal server error"}), 500
+
+#     logging.info(f"Chatbot Response: {chatbot_response}")
+#     return jsonify({"response": chatbot_response})
+
+
+# if __name__ == '__main__':
+#     app.run(host="0.0.0.0", port=8080, debug=True)
